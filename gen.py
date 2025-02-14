@@ -3,7 +3,7 @@ import random
 
 # Load the previously generated names from the uploaded file to avoid duplication
 previous_names = set()
-img_path = "C:/app/Automation/compressedImages/"
+img_path = "/app/compressedImages/"
 
 # with open("new_indian_names3.csv", mode="r") as file:
 #     reader = csv.reader(file)
@@ -238,6 +238,12 @@ def get_state_city(surname):
     state, cities = surnames_to_states.get(surname, ("Unknown", ["Unknown City"]))
     return state, random.choice(cities)
 
+n=[]
+def generate_number():
+    a=random.randint(1, 1600)
+    return a
+
+
 # Generate 3900 new unique names avoiding duplicates
 new_entries = []
 count=0
@@ -284,16 +290,16 @@ for i in range(7):
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
                         if 162<=j<=176:
-                            new_entries.append([name, "19-25", "Female", generate_mobile_number(), f"{img_path}smf{csmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "19-25", "Female", generate_mobile_number(), f"{img_path}smf{csmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             csmf+=1
                         elif 177<=j<=195:
-                            new_entries.append([name, "26-40", "Female", generate_mobile_number(), f"{img_path}mf{cmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "26-40", "Female", generate_mobile_number(), f"{img_path}mf{cmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             cmf+=1
                         elif 155<=j<=161:
-                            new_entries.append([name, "Under 18", "Female", generate_mobile_number(), f"{img_path}sf{csf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "Under 18", "Female", generate_mobile_number(), f"{img_path}sf{csf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             csf+=1
                         elif 196<=j<=214:
-                            new_entries.append([name, "41-60", "Female", generate_mobile_number(), f"{img_path}lf{clf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "41-60", "Female", generate_mobile_number(), f"{img_path}lf{clf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             clf+=1
                         # elif 118<=j<=123:
                         #     new_entries.append([name, "Above 60", "Female", generate_mobile_number()])
@@ -321,16 +327,16 @@ for i in range(7):
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
                         if 25<=j<=53:
-                            new_entries.append([name, "19-25", "Male", generate_mobile_number(), f"{img_path}smm{csmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "19-25", "Male", generate_mobile_number(), f"{img_path}smm{csmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             csmm+=1
                         elif 54<=j<=103:
-                            new_entries.append([name, "26-40", "Male", generate_mobile_number(), f"{img_path}mm{cmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "26-40", "Male", generate_mobile_number(), f"{img_path}mm{cmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             cmm+=1
                         elif 1<=j<=24:
-                            new_entries.append([name, "Under 18", "Male", generate_mobile_number(), f"{img_path}sm{csm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "Under 18", "Male", generate_mobile_number(), f"{img_path}sm{csm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             csm+=1
                         elif 104<=j<=142:
-                            new_entries.append([name, "41-60", "Male", generate_mobile_number(), f"{img_path}lm{clm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "41-60", "Male", generate_mobile_number(), f"{img_path}lm{clm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                             clm+=1
                         # elif 83<=j<=92:
                         #     new_entries.append([name, "Above 60", "Female", generate_mobile_number()])
@@ -357,7 +363,7 @@ for i in range(7):
                         previous_names.add(name)
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
-                        new_entries.append([name, "Above 60", "Male", generate_mobile_number(), f"{img_path}xm{cxm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                        new_entries.append([name, "Above 60", "Male", generate_mobile_number(), f"{img_path}xm{cxm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                         cxm+=1
                         count = count+1
                         print(count)
@@ -382,7 +388,7 @@ for i in range(7):
                         previous_names.add(name)
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
-                        new_entries.append([name, "Above 60", "Female", generate_mobile_number(), f"{img_path}xf{cxf}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                        new_entries.append([name, "Above 60", "Female", generate_mobile_number(), f"{img_path}xf{cxf}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others, generate_number()])
                         cxf+=1
                         count = count+1
                         print(count)
@@ -401,11 +407,30 @@ new_xlsx_file = "output.xlsx"  # Specify the name of the output file
 workbook = openpyxl.Workbook()
 sheet = workbook.active
 
-header = ["Name", "Age", "Gender", "Mobile Number", "Image", "State", "City", "NextVisit", "LastVisit", "FavVisit", "Plan", "Mode", "Group", "Travel", "Food", "ReligiousItems", "Recreation", "Shopping", "Others"]
+header = ["Name", "Age", "Gender", "Mobile Number", "Image", "State", "City", "NextVisit", "LastVisit", "FavVisit", "Plan", "Mode", "Group", "Travel", "Food", "ReligiousItems", "Recreation", "Shopping", "Others", "Sort"]
 sheet.append(header)
 
 for entry in new_entries:
     sheet.append(entry)
+
+rows = list(sheet.iter_rows(values_only=True))
+header = rows[0]
+data_rows = rows[1:]
+
+# Find the index of the "Sort" column
+sort_column_index = header.index("Sort")
+
+# Sort the data rows by the "Sort" column (ascending order)
+sorted_rows = sorted(data_rows, key=lambda row: row[sort_column_index])
+
+# Clear the existing sheet content
+sheet.delete_rows(1, sheet.max_row)
+
+# Write back the header and sorted rows
+sheet.append(header)
+for row in sorted_rows:
+    sheet.append(row)
+
 
 # Save the workbook to the specified file
 workbook.save(new_xlsx_file)
