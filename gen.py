@@ -3,7 +3,7 @@ import random
 
 # Load the previously generated names from the uploaded file to avoid duplication
 previous_names = set()
-img_path = "C:/Users/Lenovo/Downloads/compressedImages/"
+img_path = "C:/app/Automation/compressedImages/"
 
 # with open("new_indian_names3.csv", mode="r") as file:
 #     reader = csv.reader(file)
@@ -251,7 +251,17 @@ csmm=1
 cmm=1
 clm=1
 cxm=1
-for i in range(1):  
+for i in range(10): 
+    csf=1
+    csmf=1
+    cmf=1
+    clf=1
+    cxf=1
+    csm=1
+    csmm=1
+    cmm=1
+    clm=1
+    cxm=1 
     for j in range(1, 124):
         if 93 <= j <= 117: 
             while True:
@@ -314,7 +324,7 @@ for i in range(1):
                             new_entries.append([name, "19-25", "Male", generate_mobile_number(), f"{img_path}smm{csmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             csmm+=1
                         elif 24<=j<=53:
-                            new_entries.append([name, "26-40", "Male", generate_mobile_number(), f"{img_path}smm{cmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
+                            new_entries.append([name, "26-40", "Male", generate_mobile_number(), f"{img_path}mm{cmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             cmm+=1
                         elif 1<=j<=14:
                             new_entries.append([name, "Under 18", "Male", generate_mobile_number(), f"{img_path}sm{csm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])

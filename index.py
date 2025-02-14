@@ -1,5 +1,5 @@
 import pandas as pd
-from selenium import webdriver
+from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -7,16 +7,24 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-df = pd.read_excel("C:/Users/Lenovo/Desktop/Web/Kumbh/output.xlsx") #Add path of survey.xlsx in your device
+df = pd.read_excel("output.xlsx") #Add path of survey.xlsx in your device
 
 # Correct the path of Chrome driver in your device (use forward slashes or escape backslashes)
-driver_path = 'C:/Users/Lenovo/Downloads/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe'
+# driver_path = 'C:/Users/Lenovo/Downloads/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe'
 
-# Create a Service object for Chromedriver
-service = Service(driver_path)
+# # Create a Service object for Chromedriver
+# service = Service(driver_path)
 
-# Initialize the Webdriver with the Service object
-driver = webdriver.Chrome(service=service)
+# # Initialize the Webdriver with the Service object
+# driver = webdriver.Chrome(service=service)
+
+options = ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+
+driver = Chrome(options=options)
 
 # Open the login page
 driver.get('https://www.uptisurvey.in/mahakumbh/mahakumbh-survey')  # Replace with the form URL
