@@ -251,7 +251,7 @@ csmm=1
 cmm=1
 clm=1
 cxm=1
-for i in range(10): 
+for i in range(7): 
     csf=1
     csmf=1
     cmf=1
@@ -262,8 +262,8 @@ for i in range(10):
     cmm=1
     clm=1
     cxm=1 
-    for j in range(1, 124):
-        if 93 <= j <= 117: 
+    for j in range(1, 223):
+        if 155 <= j <= 214: 
             while True:
                 name = f"{random.choice(new_female_names)} {random.choice(surnames)}"
                 plan = f"{random.choice(Plan)}"
@@ -283,16 +283,16 @@ for i in range(10):
                         previous_names.add(name)
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
-                        if 95<=j<=99:
+                        if 162<=j<=176:
                             new_entries.append([name, "19-25", "Female", generate_mobile_number(), f"{img_path}smf{csmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             csmf+=1
-                        elif 100<=j<=103:
+                        elif 177<=j<=195:
                             new_entries.append([name, "26-40", "Female", generate_mobile_number(), f"{img_path}mf{cmf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             cmf+=1
-                        elif 93<=j<=94:
+                        elif 155<=j<=161:
                             new_entries.append([name, "Under 18", "Female", generate_mobile_number(), f"{img_path}sf{csf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             csf+=1
-                        elif 104<=j<=117:
+                        elif 196<=j<=214:
                             new_entries.append([name, "41-60", "Female", generate_mobile_number(), f"{img_path}lf{clf}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             clf+=1
                         # elif 118<=j<=123:
@@ -300,7 +300,7 @@ for i in range(10):
                         count= count+1
                         print(count)
                         break
-        elif  1<= j <= 82 :  # Female entries
+        elif  1<= j <= 142 :  # Female entries
             while True:
                 name = f"{random.choice(new_male_names)} {random.choice(surnames)}"
                 plan = f"{random.choice(Plan)}"
@@ -320,16 +320,16 @@ for i in range(10):
                         previous_names.add(name)
                         surname = name.split()[-1]
                         state, city = get_state_city(surname)
-                        if 15<=j<=23:
+                        if 25<=j<=53:
                             new_entries.append([name, "19-25", "Male", generate_mobile_number(), f"{img_path}smm{csmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             csmm+=1
-                        elif 24<=j<=53:
+                        elif 54<=j<=103:
                             new_entries.append([name, "26-40", "Male", generate_mobile_number(), f"{img_path}mm{cmm}.jpg", state, city,next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             cmm+=1
-                        elif 1<=j<=14:
+                        elif 1<=j<=24:
                             new_entries.append([name, "Under 18", "Male", generate_mobile_number(), f"{img_path}sm{csm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             csm+=1
-                        elif 54<=j<=82:
+                        elif 104<=j<=142:
                             new_entries.append([name, "41-60", "Male", generate_mobile_number(), f"{img_path}lm{clm}.jpg", state, city, next, last, fav, plan, mode, group, travel, food, religious, recreation, shopping, others])
                             clm+=1
                         # elif 83<=j<=92:
@@ -337,7 +337,7 @@ for i in range(10):
                         count = count+1
                         print(count)
                         break
-        elif 83<=j<=92:
+        elif 143<=j<=154:
             while True:
                 name = f"{random.choice(old_male_names)} {random.choice(surnames)}"
                 plan = f"{random.choice(Plan)}"
@@ -362,7 +362,7 @@ for i in range(10):
                         count = count+1
                         print(count)
                         break
-        elif 118<=j<=123:
+        elif 215<=j<=223:
             while True:
                 name = f"{random.choice(old_female_names)} {random.choice(surnames)}"
                 plan = f"{random.choice(Plan)}"
